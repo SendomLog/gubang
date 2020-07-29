@@ -1,0 +1,10 @@
+Package: com.sendom.gubang
+Name: GuBang
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: SendomZhang
+Author: SendomZhang
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
+Version: 0.0.1-11+debug
+Installed-Size: 200
