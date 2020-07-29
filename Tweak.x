@@ -47,6 +47,8 @@ the generation of a class list and an automatic constructor.
 %hook EntityModel
 
 - (NSString *)type {
+	NSString *type = %orig;
+	return type;
 	return @"zlArticle";
 }
 

@@ -73,10 +73,12 @@ static void _logos_method$_ungrouped$WenZhangViewController$updateVIPMask(_LOGOS
 
 
 static NSString * _logos_method$_ungrouped$EntityModel$type(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+	NSString *type = _logos_orig$_ungrouped$EntityModel$type(self, _cmd);
+	return type;
 	return @"zlArticle";
 }
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
 {Class _logos_class$_ungrouped$WenZhangViewController = objc_getClass("WenZhangViewController"); { MSHookMessageEx(_logos_class$_ungrouped$WenZhangViewController, @selector(updateVIPMask), (IMP)&_logos_method$_ungrouped$WenZhangViewController$updateVIPMask, (IMP*)&_logos_orig$_ungrouped$WenZhangViewController$updateVIPMask);}Class _logos_class$_ungrouped$EntityModel = objc_getClass("EntityModel"); { MSHookMessageEx(_logos_class$_ungrouped$EntityModel, @selector(type), (IMP)&_logos_method$_ungrouped$EntityModel$type, (IMP*)&_logos_orig$_ungrouped$EntityModel$type);}} }
-#line 54 "Tweak.x"
+#line 56 "Tweak.x"
