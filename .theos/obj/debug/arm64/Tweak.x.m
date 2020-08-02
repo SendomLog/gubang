@@ -58,7 +58,7 @@
 #endif
 
 @class EntityModel; @class WenZhangViewController; 
-static void (*_logos_orig$_ungrouped$WenZhangViewController$updateVIPMask)(_LOGOS_SELF_TYPE_NORMAL WenZhangViewController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$WenZhangViewController$updateVIPMask(_LOGOS_SELF_TYPE_NORMAL WenZhangViewController* _LOGOS_SELF_CONST, SEL); static NSString * (*_logos_orig$_ungrouped$EntityModel$type)(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$_ungrouped$EntityModel$type(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); 
+static void (*_logos_orig$_ungrouped$WenZhangViewController$updateVIPMask)(_LOGOS_SELF_TYPE_NORMAL WenZhangViewController* _LOGOS_SELF_CONST, SEL); static void _logos_method$_ungrouped$WenZhangViewController$updateVIPMask(_LOGOS_SELF_TYPE_NORMAL WenZhangViewController* _LOGOS_SELF_CONST, SEL); static NSString * (*_logos_orig$_ungrouped$EntityModel$type)(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static NSString * _logos_method$_ungrouped$EntityModel$type(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static int (*_logos_orig$_ungrouped$EntityModel$zlSubscribeType)(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static int _logos_method$_ungrouped$EntityModel$zlSubscribeType(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static int (*_logos_orig$_ungrouped$EntityModel$zlType)(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); static int _logos_method$_ungrouped$EntityModel$zlType(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST, SEL); 
 
 #line 38 "Tweak.x"
 
@@ -73,12 +73,20 @@ static void _logos_method$_ungrouped$WenZhangViewController$updateVIPMask(_LOGOS
 
 
 static NSString * _logos_method$_ungrouped$EntityModel$type(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
-	NSString *type = _logos_orig$_ungrouped$EntityModel$type(self, _cmd);
+	id type = _logos_orig$_ungrouped$EntityModel$type(self, _cmd);
 	return type;
-	return @"zlArticle";
+	
+}
+
+static int _logos_method$_ungrouped$EntityModel$zlSubscribeType(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+	return 2;
+}
+
+static int _logos_method$_ungrouped$EntityModel$zlType(_LOGOS_SELF_TYPE_NORMAL EntityModel* _LOGOS_SELF_CONST __unused self, SEL __unused _cmd) {
+	return 2;
 }
 
 
 static __attribute__((constructor)) void _logosLocalInit() {
-{Class _logos_class$_ungrouped$WenZhangViewController = objc_getClass("WenZhangViewController"); { MSHookMessageEx(_logos_class$_ungrouped$WenZhangViewController, @selector(updateVIPMask), (IMP)&_logos_method$_ungrouped$WenZhangViewController$updateVIPMask, (IMP*)&_logos_orig$_ungrouped$WenZhangViewController$updateVIPMask);}Class _logos_class$_ungrouped$EntityModel = objc_getClass("EntityModel"); { MSHookMessageEx(_logos_class$_ungrouped$EntityModel, @selector(type), (IMP)&_logos_method$_ungrouped$EntityModel$type, (IMP*)&_logos_orig$_ungrouped$EntityModel$type);}} }
-#line 56 "Tweak.x"
+{Class _logos_class$_ungrouped$WenZhangViewController = objc_getClass("WenZhangViewController"); { MSHookMessageEx(_logos_class$_ungrouped$WenZhangViewController, @selector(updateVIPMask), (IMP)&_logos_method$_ungrouped$WenZhangViewController$updateVIPMask, (IMP*)&_logos_orig$_ungrouped$WenZhangViewController$updateVIPMask);}Class _logos_class$_ungrouped$EntityModel = objc_getClass("EntityModel"); { MSHookMessageEx(_logos_class$_ungrouped$EntityModel, @selector(type), (IMP)&_logos_method$_ungrouped$EntityModel$type, (IMP*)&_logos_orig$_ungrouped$EntityModel$type);}{ MSHookMessageEx(_logos_class$_ungrouped$EntityModel, @selector(zlSubscribeType), (IMP)&_logos_method$_ungrouped$EntityModel$zlSubscribeType, (IMP*)&_logos_orig$_ungrouped$EntityModel$zlSubscribeType);}{ MSHookMessageEx(_logos_class$_ungrouped$EntityModel, @selector(zlType), (IMP)&_logos_method$_ungrouped$EntityModel$zlType, (IMP*)&_logos_orig$_ungrouped$EntityModel$zlType);}} }
+#line 64 "Tweak.x"
